@@ -27,7 +27,7 @@ export function Login() {
   const esAlumno = rol === 'alumno'
 
   return (
-    <div className="min-h-screen bg-slate-950 flex items-center justify-center p-6">
+    <div className="min-h-screen bg-blue-950 flex items-center justify-center p-6">
 
       <div className="relative w-full max-w-sm">
 
@@ -70,7 +70,7 @@ export function Login() {
             <img
               src={esAlumno
                 ? 'https://api.dicebear.com/9.x/avataaars/svg?seed=AlexStudent'
-                : 'https://api.dicebear.com/9.x/avataaars/svg?seed=AlbaTeacher&backgroundColor[]=b6e3f4&top[]=longHairStraight&hairColor[]=brownDark'
+                : '/avatar-profe.jpg'
               }
               alt="avatar"
               className="h-10 w-10 rounded-full bg-slate-600 shrink-0"

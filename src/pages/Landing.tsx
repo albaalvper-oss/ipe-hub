@@ -5,7 +5,7 @@ export function Landing() {
   const navigate = useNavigate()
 
   return (
-    <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 relative overflow-hidden">
+    <div className="min-h-screen bg-blue-950 flex flex-col items-center justify-center p-6 relative overflow-hidden">
 
       {/* Fondo decorativo */}
       <div className="absolute top-0 left-0 h-full w-full overflow-hidden pointer-events-none">

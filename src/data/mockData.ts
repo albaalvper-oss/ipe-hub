@@ -18,7 +18,7 @@ export const teacherProfile = {
   id: 'teacher1',
   name: 'Alba Álvarez',
   username: '@alba.alvarez',
-  avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=AlbaTeacher&backgroundColor[]=b6e3f4&top[]=longHairStraight&hairColor[]=brownDark',
+  avatar: '/avatar-profe.jpg',
   subject: 'Profesora · Grado Medio TAPSD',
   centro: 'Centro Formación Profesional',
   alumnos: 28,
@@ -36,7 +36,7 @@ export const misAlumnos = [
 ]
 
 export const stories = [
-  { id: '1', user: 'Profe Alba', avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=AlbaTeacher&backgroundColor[]=b6e3f4&top[]=longHairStraight&hairColor[]=brownDark', visto: false },
+  { id: '1', user: 'Profe Alba', avatar: '/avatar-profe.jpg', visto: false },
   { id: '2', user: 'Carlos Dev', avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=Carlos', visto: false },
   { id: '3', user: 'IPE Hub', avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=IPE', visto: false },
   { id: '4', user: 'María FP', avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=Maria', visto: true },
@@ -77,7 +77,7 @@ export const feedPosts = [
     titulo: 'Guía práctica: técnicas de movilización segura',
     descripcion: 'Aprende a realizar traslados y cambios posturales sin riesgo para la persona atendida ni para ti. Ergonomía aplicada al sector.',
     autor: 'Profe Alba',
-    avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=AlbaTeacher&backgroundColor[]=b6e3f4&top[]=longHairStraight&hairColor[]=brownDark',
+    avatar: '/avatar-profe.jpg',
     categoria: 'Técnicas de atención',
     categoriaColor: 'bg-purple-100 text-purple-700',
     likes: 203, comentarios: 45, guardados: 128,
@@ -581,11 +581,76 @@ export const evaluacionesDocente: {
   id: string
   titulo: string
   descripcion: string
-  categoria: 'Rúbrica' | 'Lista de cotejo' | 'Lista de observación'
+  categoria: 'Rúbrica' | 'Autoevaluación' | 'Lista de cotejo' | 'Lista de observación'
   emoji: string
   url: string
+  ipe: 'IPE I' | 'IPE II'
 }[] = [
-  // Añade aquí los documentos: sube el PDF a /public y referencia la ruta
+  // ── IPE I ──────────────────────────────────────────────────────────────────
+  {
+    id: '1',
+    titulo: 'Rúbrica Actividad 2 (PRL)',
+    descripcion: 'Criterios y niveles de desempeño para la actividad de Prevención de Riesgos Laborales.',
+    categoria: 'Rúbrica',
+    emoji: '📋',
+    url: '/RÚBRICA ACTIVIDAD 2. (PRL).pdf',
+    ipe: 'IPE I',
+  },
+  {
+    id: '2',
+    titulo: 'Autoevaluación de Actividad 1',
+    descripcion: 'Instrumento para que el alumnado valore su propio desempeño en la Actividad 1.',
+    categoria: 'Autoevaluación',
+    emoji: '🪞',
+    url: '/AUTOEVALAUCIÓN DE ACTIVIDAD 1.pdf',
+    ipe: 'IPE I',
+  },
+  {
+    id: '3',
+    titulo: 'Lista de Cotejo Actividad 3 (Contrato)',
+    descripcion: 'Indicadores para verificar el cumplimiento de criterios en la actividad del contrato de trabajo.',
+    categoria: 'Lista de cotejo',
+    emoji: '✅',
+    url: '/LISTA DE COTEJO ACTIVIDAD 3. (CONTRATO).pdf',
+    ipe: 'IPE I',
+  },
+  {
+    id: '4',
+    titulo: 'Lista de Cotejo Actividad 5 — Descubriendo mi perfil profesional',
+    descripcion: 'Indicadores para verificar los criterios de la actividad Descubriendo mi perfil profesional.',
+    categoria: 'Lista de cotejo',
+    emoji: '✅',
+    url: '/LISTA DE COTEJO ACTIVIDAD 5..pdf',
+    ipe: 'IPE I',
+  },
+  // ── IPE II ─────────────────────────────────────────────────────────────────
+  {
+    id: '5',
+    titulo: 'Rúbrica para debate (Actividad 1)',
+    descripcion: 'Criterios de evaluación para la actividad de debate en equipo.',
+    categoria: 'Rúbrica',
+    emoji: '🗣️',
+    url: '/Rúbrica para debate (Actividad 1).pdf',
+    ipe: 'IPE II',
+  },
+  {
+    id: '6',
+    titulo: 'Rúbrica Actividad 2: Rúbrica de trabajo cooperativo',
+    descripcion: 'Criterios y niveles de desempeño para evaluar el trabajo cooperativo en la Actividad 2.',
+    categoria: 'Rúbrica',
+    emoji: '🤝',
+    url: '/Rúbrica Actividad 2. (IPE II).pdf',
+    ipe: 'IPE II',
+  },
+  {
+    id: '7',
+    titulo: 'Rúbrica del Proyecto Emprendedor',
+    descripcion: 'Criterios de evaluación para el proyecto de emprendimiento final.',
+    categoria: 'Rúbrica',
+    emoji: '🚀',
+    url: '/RÚBRICA DEL PROYECTO EMPRENDEDOR.pdf',
+    ipe: 'IPE II',
+  },
 ]
 
 export const materialesParaAlumnado = [

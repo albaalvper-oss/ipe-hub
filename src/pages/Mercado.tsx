@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { Avatar } from '@/components/ui/Avatar'
-import { tendenciasMercado, enlacesTendencias, debateMercado, ofertas, currentUser, teacherProfile } from '@/data/mockData'
+import { tendenciasMercado, enlacesTendencias, debateMercado, ofertas, currentUser } from '@/data/mockData'
 import { useAuth } from '@/context/AuthContext'
 import { cn } from '@/lib/utils'
 
@@ -139,7 +139,7 @@ export function Mercado() {
                     <div className="flex items-center justify-between gap-2 mb-1">
                       <div className="flex items-center gap-2">
                         <img
-                          src={`https://api.dicebear.com/9.x/avataaars/svg?seed=AlbaTeacher&backgroundColor[]=b6e3f4&top[]=longHairStraight&hairColor[]=brownDark`}
+                          src="/avatar-profe.jpg"
                           alt="Alba Álvarez"
                           className="h-5 w-5 rounded-full bg-white/20"
                         />
@@ -439,7 +439,7 @@ export function Mercado() {
               <CardContent className="p-4">
                 <p className="text-sm font-semibold text-foreground mb-3">Habilidades más buscadas</p>
                 <div className="flex flex-wrap gap-2">
-                  {['React', 'Python', 'Machine Learning', 'Docker', 'TypeScript', 'Kubernetes', 'AWS', 'Git', 'SQL', 'Figma'].map((skill, i) => (
+                  {['Higiene personal', 'Movilización', 'Comunicación empática', 'Primeros auxilios', 'Atención domiciliaria', 'Estimulación cognitiva', 'Trabajo en equipo', 'PRL', 'AVD', 'Apoyo emocional'].map((skill, i) => (
                     <span key={skill} className={cn('px-3 py-1.5 rounded-full text-xs font-medium', i < 3 ? 'bg-amber-100 text-amber-700 dark:bg-amber-950/30 dark:text-amber-400' : 'bg-muted text-muted-foreground')}>
                       {skill}
                     </span>
