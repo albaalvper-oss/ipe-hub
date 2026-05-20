@@ -4,7 +4,7 @@ export const currentUser = {
   username: '@alexgarcia',
   avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=AlexStudent',
   ciclo: 'Grado Medio — Atención a Personas en Situación de Dependencia',
-  centro: 'IES Tecnológico Salamanca',
+  centro: 'Centro Formación Profesional',
   xp: 3240,
   nivel: 12,
   xpSiguienteNivel: 4000,
@@ -18,9 +18,9 @@ export const teacherProfile = {
   id: 'teacher1',
   name: 'Alba Álvarez',
   username: '@alba.alvarez',
-  avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=AlbaTeacher&backgroundColor=b6e3f4',
+  avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=AlbaTeacher&backgroundColor[]=b6e3f4&top[]=longHairStraight&hairColor[]=brownDark',
   subject: 'Profesora · Grado Medio TAPSD',
-  centro: 'IES Tecnológico Salamanca',
+  centro: 'Centro Formación Profesional',
   alumnos: 28,
   cursosActivos: 2,
   misionesCreadas: 7,
@@ -36,7 +36,7 @@ export const misAlumnos = [
 ]
 
 export const stories = [
-  { id: '1', user: 'Profe Alba', avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=AlbaTeacher', visto: false },
+  { id: '1', user: 'Profe Alba', avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=AlbaTeacher&backgroundColor[]=b6e3f4&top[]=longHairStraight&hairColor[]=brownDark', visto: false },
   { id: '2', user: 'Carlos Dev', avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=Carlos', visto: false },
   { id: '3', user: 'IPE Hub', avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=IPE', visto: false },
   { id: '4', user: 'María FP', avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=Maria', visto: true },
@@ -77,7 +77,7 @@ export const feedPosts = [
     titulo: 'Guía práctica: técnicas de movilización segura',
     descripcion: 'Aprende a realizar traslados y cambios posturales sin riesgo para la persona atendida ni para ti. Ergonomía aplicada al sector.',
     autor: 'Profe Alba',
-    avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=AlbaTeacher',
+    avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=AlbaTeacher&backgroundColor[]=b6e3f4&top[]=longHairStraight&hairColor[]=brownDark',
     categoria: 'Técnicas de atención',
     categoriaColor: 'bg-purple-100 text-purple-700',
     likes: 203, comentarios: 45, guardados: 128,
@@ -493,17 +493,36 @@ export const retosABR = [
     url: '/ACTIVIDAD_TRABAJANDO CON SEGURIDAD EN EL ÁMBITO DEL TAPSD.pdf',
   },
   {
-    id: '2',
-    titulo: 'Mi CV para el sector sociosanitario',
-    descripcion: 'Crea y presenta tu CV profesional adaptado a ofertas del sector de atención a la dependencia.',
+    id: '3',
+    titulo: 'Completo mi primer contrato de trabajo',
+    descripcion: 'Descarga las tres ofertas de empleo, elige la que más se ajuste a tu perfil y completa el modelo de contrato correspondiente con todos los datos de la oferta seleccionada.',
     dificultad: 'Básico',
-    xp: 350,
-    deadline: '10 días',
+    xp: 300,
+    deadline: '7 días',
     equipo: false,
-    participantes: 112,
-    emoji: '📄',
+    participantes: 28,
+    emoji: '✍️',
+    gradiente: 'from-blue-500 to-indigo-600',
+    tags: ['Contratos', 'Empleo', 'Documentación'],
+    url: '/ACTIVIDAD 3_ COMPLETO MI PRIMER CONTRATO DE TRABAJO.pdf',
+    nota: 'En el apartado Recursos encontrarás los tres modelos de contrato (indefinido, temporal y formativo) para descargar y completar.',
+  },
+]
+
+export const retosABR_IPE2 = [
+  {
+    id: '1',
+    titulo: 'Superando retos en equipo',
+    descripcion: 'Sois el equipo de auxiliares de un centro de día. Se incorpora una nueva compañera y la situación no es sencilla: un usuario conflictivo, desacuerdos internos y el turno muy cargado. Elaborad un plan de acogida consensuado y presentad vuestra propuesta al grupo.',
+    dificultad: 'Intermedio',
+    xp: 450,
+    deadline: '10 días',
+    equipo: true,
+    participantes: 28,
+    emoji: '🤝',
     gradiente: 'from-violet-500 to-purple-600',
-    tags: ['CV', 'Empleabilidad', 'Sector social'],
+    tags: ['Trabajo en equipo', 'Resolución de conflictos', 'Entorno profesional'],
+    url: '/ACTIVIDAD_ SUPERANDO RETOS EN EQUIPO.pdf',
   },
 ]
 
@@ -547,6 +566,26 @@ export const actividadesDocente = [
   { id: '1', titulo: 'Misión: Crea tu CV para el sector sociosanitario', tipo: 'Misión', emoji: '🎯', estado: 'activa', alumnos: 28, entregados: 12, deadline: '15 mayo' },
   { id: '2', titulo: 'Reto ABR: Plan de atención personalizado', tipo: 'Reto ABR', emoji: '📋', estado: 'activa', alumnos: 28, entregados: 8, deadline: '20 mayo' },
   { id: '3', titulo: 'Reflexión: ¿Quién soy?', tipo: 'Reflexión', emoji: '🪞', estado: 'completada', alumnos: 28, entregados: 28, deadline: '1 mayo' },
+]
+
+export const actividadesDocente_IPE1 = [
+  { id: '1', titulo: 'Trabajando con Seguridad en el Ámbito del TAPSD', tipo: 'Reto ABR', emoji: '🦺', estado: 'activa', alumnos: 28, entregados: 10, deadline: '10 días' },
+  { id: '2', titulo: 'Completo mi primer contrato de trabajo', tipo: 'Reto ABR', emoji: '✍️', estado: 'activa', alumnos: 28, entregados: 6, deadline: '7 días' },
+]
+
+export const actividadesDocente_IPE2 = [
+  { id: '1', titulo: 'Superando retos en equipo', tipo: 'Reto ABR', emoji: '🤝', estado: 'activa', alumnos: 28, entregados: 5, deadline: '10 días' },
+]
+
+export const evaluacionesDocente: {
+  id: string
+  titulo: string
+  descripcion: string
+  categoria: 'Rúbrica' | 'Lista de cotejo' | 'Lista de observación'
+  emoji: string
+  url: string
+}[] = [
+  // Añade aquí los documentos: sube el PDF a /public y referencia la ruta
 ]
 
 export const materialesParaAlumnado = [

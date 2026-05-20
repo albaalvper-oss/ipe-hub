@@ -139,7 +139,7 @@ export function Mercado() {
                     <div className="flex items-center justify-between gap-2 mb-1">
                       <div className="flex items-center gap-2">
                         <img
-                          src={`https://api.dicebear.com/9.x/avataaars/svg?seed=AlbaTeacher&backgroundColor=b6e3f4`}
+                          src={`https://api.dicebear.com/9.x/avataaars/svg?seed=AlbaTeacher&backgroundColor[]=b6e3f4&top[]=longHairStraight&hairColor[]=brownDark`}
                           alt="Alba Álvarez"
                           className="h-5 w-5 rounded-full bg-white/20"
                         />

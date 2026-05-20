@@ -13,6 +13,8 @@ import { MisRecursos } from '@/pages/MisRecursos'
 import { Recursos } from '@/pages/Recursos'
 import { TrabajaSéguro } from '@/pages/TrabajaSéguro'
 import { Emprende } from '@/pages/Emprende'
+import { AulaII } from '@/pages/AulaII'
+import { Evaluaciones } from '@/pages/Evaluaciones'
 
 export default function App() {
   return (
@@ -32,6 +34,8 @@ export default function App() {
           <Route path="/recursos" element={<Recursos />} />
           <Route path="/trabaja-seguro" element={<TrabajaSéguro />} />
           <Route path="/emprende" element={<Emprende />} />
+          <Route path="/aula-ii" element={<AulaII />} />
+          <Route path="/evaluaciones" element={<Evaluaciones />} />
           {/* Redirects para rutas antiguas */}
           <Route path="/ipe" element={<Navigate to="/conocete" replace />} />
           <Route path="/empleabilidad" element={<Navigate to="/mercado" replace />} />

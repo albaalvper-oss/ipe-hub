@@ -5,7 +5,7 @@ export function Landing() {
   const navigate = useNavigate()
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-primary/20 to-slate-900 flex flex-col items-center justify-center p-6 relative overflow-hidden">
+    <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 relative overflow-hidden">
 
       {/* Fondo decorativo */}
       <div className="absolute top-0 left-0 h-full w-full overflow-hidden pointer-events-none">
@@ -47,46 +47,46 @@ export function Landing() {
           {/* Alumno */}
           <button
             onClick={() => navigate('/login', { state: { rol: 'alumno' } })}
-            className="w-full group flex items-center gap-4 bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/20 hover:border-white/40 rounded-2xl p-5 text-left transition-all duration-200 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5"
+            className="w-full group flex items-center gap-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-slate-500 rounded-2xl p-5 text-left transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
           >
-            <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shrink-0 shadow-lg group-hover:scale-105 transition-transform">
+            <div className="h-12 w-12 rounded-xl bg-slate-700 group-hover:bg-slate-600 flex items-center justify-center shrink-0 shadow-lg group-hover:scale-105 transition-all">
               <GraduationCap className="h-6 w-6 text-white" />
             </div>
             <div className="flex-1">
               <p className="font-bold text-white text-base">Soy alumno/a</p>
-              <p className="text-white/50 text-xs mt-0.5">Accede con tus credenciales o código de clase</p>
+              <p className="text-slate-400 text-xs mt-0.5">Accede con tus credenciales o código de clase</p>
             </div>
-            <div className="text-white/30 group-hover:text-white/60 transition-colors">›</div>
+            <div className="text-slate-500 group-hover:text-slate-300 transition-colors">›</div>
           </button>
 
           {/* Docente */}
           <button
             onClick={() => navigate('/login', { state: { rol: 'docente' } })}
-            className="w-full group flex items-center gap-4 bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/20 hover:border-white/40 rounded-2xl p-5 text-left transition-all duration-200 hover:shadow-lg hover:shadow-secondary/20 hover:-translate-y-0.5"
+            className="w-full group flex items-center gap-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-slate-500 rounded-2xl p-5 text-left transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
           >
-            <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center shrink-0 shadow-lg group-hover:scale-105 transition-transform">
+            <div className="h-12 w-12 rounded-xl bg-slate-700 group-hover:bg-slate-600 flex items-center justify-center shrink-0 shadow-lg group-hover:scale-105 transition-all">
               <BookOpen className="h-6 w-6 text-white" />
             </div>
             <div className="flex-1">
               <p className="font-bold text-white text-base">Soy docente</p>
-              <p className="text-white/50 text-xs mt-0.5">Gestiona tu aula, alumnado y recursos</p>
+              <p className="text-slate-400 text-xs mt-0.5">Gestiona tu aula, alumnado y recursos</p>
             </div>
-            <div className="text-white/30 group-hover:text-white/60 transition-colors">›</div>
+            <div className="text-slate-500 group-hover:text-slate-300 transition-colors">›</div>
           </button>
         </div>
 
         {/* Footer info */}
-        <p className="text-white/30 text-xs text-center mt-10 leading-relaxed">
-          ¿No tienes acceso? Contacta con tu docente.<br />
-          Esta plataforma es de uso exclusivo para el centro educativo.
-        </p>
+        <div className="mt-10 text-center space-y-1">
+          <p className="text-slate-500 text-xs leading-relaxed">
+            ¿No tienes acceso? Contacta con tu docente.<br />
+            Esta plataforma es de uso exclusivo para el centro educativo.
+          </p>
+          <div className="flex items-center justify-center gap-1.5 text-slate-600 text-xs pt-1">
+            <Zap className="h-3 w-3" />
+            IPE Hub · Itinerario Personal para la Empleabilidad
+          </div>
+        </div>
 
-      </div>
-
-      {/* Footer */}
-      <div className="absolute bottom-6 flex items-center gap-2 text-white/20 text-xs">
-        <Zap className="h-3 w-3" />
-        IPE Hub · Itinerario Personal para la Empleabilidad
       </div>
     </div>
   )

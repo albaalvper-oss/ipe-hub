@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { NavLink, useLocation, useNavigate } from 'react-router-dom'
-import { Home, Brain, TrendingUp, GraduationCap, BookOpen, User, Zap, Bell, Settings, ChevronDown, ChevronRight, Users, LogOut, FolderOpen, Shield, Rocket } from 'lucide-react'
+import { Home, Brain, TrendingUp, GraduationCap, BookOpen, User, Zap, ChevronDown, ChevronRight, Users, LogOut, FolderOpen, Shield, Rocket, ClipboardList } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Avatar } from '@/components/ui/Avatar'
 import { currentUser, teacherProfile } from '@/data/mockData'
@@ -34,7 +34,7 @@ const ipeGroups = [
     colorBg: 'bg-violet-50 dark:bg-violet-950/30',
     colorBorde: 'border-violet-200 dark:border-violet-800',
     secciones: [
-      { to: '/aula', icon: GraduationCap, label: 'Para el Aula', color: 'text-blue-500' },
+      { to: '/aula-ii', icon: GraduationCap, label: 'Para el Aula', color: 'text-blue-500' },
       { to: '/mercado', icon: TrendingUp, label: 'El Mercado Habla', color: 'text-amber-500' },
       { to: '/emprende', icon: Rocket, label: 'Emprende', color: 'text-violet-500' },
     ],
@@ -42,9 +42,11 @@ const ipeGroups = [
 ]
 
 const navDocente = [
-  { to: '/aula', icon: GraduationCap, label: 'Mi Aula', color: 'text-blue-500' },
+  { to: '/aula', icon: GraduationCap, label: 'Aula IPE I', color: 'text-blue-500' },
+  { to: '/aula-ii', icon: GraduationCap, label: 'Aula IPE II', color: 'text-violet-500' },
   { to: '/mercado', icon: TrendingUp, label: 'El Mercado Habla', color: 'text-amber-500' },
   { to: '/emprende', icon: Rocket, label: 'Emprende', color: 'text-violet-500' },
+  { to: '/evaluaciones', icon: ClipboardList, label: 'Evaluaciones', color: 'text-indigo-500' },
 ]
 
 export function Sidebar() {
@@ -53,7 +55,7 @@ export function Sidebar() {
   const { user, logout } = useAuth()
   const esDocente = user?.rol === 'docente'
 
-  const seccionesRutas = ['/conocete', '/mercado', '/aula', '/estudiar', '/trabaja-seguro', '/emprende']
+  const seccionesRutas = ['/conocete', '/mercado', '/aula', '/aula-ii', '/estudiar', '/trabaja-seguro', '/emprende']
   const enSeccion = seccionesRutas.includes(location.pathname)
 
   const [abierto, setAbierto] = useState<string | null>(() => {
@@ -251,15 +253,6 @@ export function Sidebar() {
 
       {/* Bottom */}
       <div className="px-3 space-y-0.5 mt-4">
-        <button className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-sidebar-foreground hover:bg-sidebar-accent transition-colors">
-          <Bell className="h-5 w-5" strokeWidth={1.8} />
-          Notificaciones
-          <span className="ml-auto bg-primary text-primary-foreground text-xs font-bold h-5 min-w-5 rounded-full flex items-center justify-center px-1">3</span>
-        </button>
-        <button className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-sidebar-foreground hover:bg-sidebar-accent transition-colors">
-          <Settings className="h-5 w-5" strokeWidth={1.8} />
-          Ajustes
-        </button>
         <button
           onClick={handleLogout}
           className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-red-500 hover:bg-red-50 dark:hover:bg-red-950/20 transition-colors"

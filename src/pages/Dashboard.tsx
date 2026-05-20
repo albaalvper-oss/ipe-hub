@@ -113,15 +113,15 @@ const seccionesIPE2 = [
     nueva: true,
   },
   {
-    to: '/aula',
+    to: '/aula-ii',
     titulo: 'Para el Aula',
-    subtitulo: 'Retos avanzados y proyectos reales',
-    descripcion: 'Hackathons, portfolio y colaboración profesional',
+    subtitulo: 'Situaciones profesionales reales',
+    descripcion: 'Retos basados en situaciones del entorno laboral del sector TAPSD',
     emoji: '🎓',
     icon: GraduationCap,
-    gradiente: 'from-blue-500 to-indigo-600',
+    gradiente: 'from-violet-500 to-purple-600',
     progreso: 80,
-    etiqueta: 'Hackathon activo',
+    etiqueta: 'Reto activo',
     nueva: false,
   },
   {
@@ -150,10 +150,12 @@ function DashboardDocente() {
   const progresoMedio = Math.round(misAlumnos.reduce((sum, a) => sum + a.progreso, 0) / misAlumnos.length)
 
   const acciones = [
-    { label: 'Crear misión', emoji: '🎯', to: '/aula', color: 'from-violet-500 to-purple-600' },
+    { label: 'Aula IPE I', emoji: '🎓', to: '/aula', color: 'from-blue-500 to-indigo-600' },
+    { label: 'Aula IPE II', emoji: '🏆', to: '/aula-ii', color: 'from-violet-500 to-purple-600' },
     { label: 'Ver alumnado', emoji: '👥', to: '/perfil', color: 'from-blue-500 to-indigo-600' },
     { label: 'El Mercado', emoji: '📈', to: '/mercado', color: 'from-amber-500 to-orange-600' },
     { label: 'Emprende', emoji: '🚀', to: '/emprende', color: 'from-emerald-500 to-teal-600' },
+    { label: 'Evaluaciones', emoji: '📊', to: '/evaluaciones', color: 'from-slate-600 to-indigo-700' },
   ]
 
   return (
@@ -170,7 +172,7 @@ function DashboardDocente() {
             <Avatar src={teacherProfile.avatar} alt={teacherProfile.name} size="xl" ring />
             <div>
               <p className="text-white/70 text-xs font-medium">Panel docente</p>
-              <p className="font-extrabold text-xl leading-tight">{teacherProfile.name.split(' ')[0]} 👋</p>
+              <p className="font-extrabold text-xl leading-tight">¡Hola, {teacherProfile.name.split(' ')[0]}! 👋</p>
               <p className="text-white/70 text-xs">{teacherProfile.subject}</p>
               <p className="text-white/50 text-xs">{teacherProfile.centro}</p>
             </div>
@@ -316,8 +318,8 @@ export function Dashboard() {
               <div className="flex items-center gap-3">
                 <Avatar src={currentUser.avatar} alt={currentUser.name} size="lg" ring />
                 <div>
-                  <p className="text-white/80 text-xs font-medium">Bienvenido de vuelta</p>
-                  <p className="font-extrabold text-lg leading-tight">{currentUser.name.split(' ')[0]} 👋</p>
+                  <p className="text-white/80 text-xs font-medium">Panel alumno/a</p>
+                  <p className="font-extrabold text-lg leading-tight">¡Hola, {currentUser.name.split(' ')[0]}! 👋</p>
                   <p className="text-white/70 text-xs">{currentUser.ciclo}</p>
                 </div>
               </div>

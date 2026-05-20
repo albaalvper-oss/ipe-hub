@@ -5,13 +5,13 @@ import { Card, CardContent } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { ProgressBar } from '@/components/ui/ProgressBar'
-import { misionActiva, retosABR, insigniasAula, currentUser, actividadesDocente } from '@/data/mockData'
+import { misionActiva, retosABR, insigniasAula, currentUser, actividadesDocente_IPE1 } from '@/data/mockData'
 import { useAuth } from '@/context/AuthContext'
 import { cn } from '@/lib/utils'
 
 function AulaDocente() {
   const [mostrarFormulario, setMostrarFormulario] = useState(false)
-  const [actividades, setActividades] = useState(actividadesDocente)
+  const [actividades, setActividades] = useState(actividadesDocente_IPE1)
   const [nuevaActividad, setNuevaActividad] = useState({ titulo: '', tipo: 'Misión', deadline: '' })
 
   const crearActividad = () => {
@@ -302,7 +302,7 @@ export function Aula() {
             <span className="text-xs text-muted-foreground">{retosABR.length} disponibles</span>
           </div>
           <div className="space-y-3">
-            {(retosABR as (typeof retosABR[number] & { url?: string })[]).map(reto => (
+            {(retosABR as (typeof retosABR[number] & { url?: string; nota?: string })[]).map(reto => (
               <Card key={reto.id} hover>
                 <CardContent className="p-0 overflow-hidden">
                   <div className={cn('bg-gradient-to-br p-4 flex items-start gap-3', reto.gradiente)}>
@@ -328,6 +328,12 @@ export function Aula() {
                         <Download className="h-4 w-4 shrink-0" />
                         <span className="text-xs font-bold">Descargar plantilla de la actividad</span>
                       </a>
+                    )}
+                    {reto.nota && (
+                      <div className="flex items-start gap-2 w-full mb-3 p-3 rounded-xl bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-400">
+                        <span className="shrink-0 text-sm">💡</span>
+                        <span className="text-xs leading-snug">{reto.nota}</span>
+                      </div>
                     )}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3 text-xs text-muted-foreground">
